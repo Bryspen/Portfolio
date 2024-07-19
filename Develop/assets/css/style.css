@@ -82,7 +82,6 @@ nav a:last-child {
 }
 
 main {
-  
   margin-bottom: 45px;
 }
 
@@ -105,7 +104,7 @@ main {
   flex: 0 0 90%;
 }
 
-.hero-banner h2 {
+.hero-banner > h2 {
   background-color: var(--secondary);
   color: var(--tertiary);
   margin: 0;
@@ -140,8 +139,12 @@ main {
   line-height: 1.1;
 }
 
-.page-section > p {
+.page-section > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   flex: 0 0 77%;
+  
 }
 
 .page-section p {
@@ -151,7 +154,7 @@ main {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: right;
+  justify-content: center;
   
 }
 
@@ -171,23 +174,21 @@ main {
   background-size: 150%;
   transition: all 0.5s;
   font-size: 0.9rem;
-  
 }
 
 /* feature first portfolio item */
-
+.flex-item:first-child {
+  min-height: 400px;
+  flex:0 0 99%; 
+}
 
 .flex-item:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .flex-item  div {
-  color: var(--tertiary);
   background-color: var(--secondary);
-  padding: 5px 1% 5px 6%;
-  margin: 0;
-  font-size: 2vw;
-  line-height: 1;
+  padding: 8px 10px;
 }
 
 
@@ -195,7 +196,7 @@ main {
    font-size: 1.6vw;
 }
 
-.contact address {
+.contact-address {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -203,11 +204,11 @@ main {
   height: 100%;
 }
 
-.contact address a {
+.contact-address a {
   color: var(--tertiary);
   padding: 5px;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-style: normal;
   background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
   background-repeat: no-repeat;
@@ -218,7 +219,7 @@ main {
   display: inline-block;
 }
 
-.contact address a:hover {
+.contact-address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
 }
@@ -238,6 +239,7 @@ main {
 /* TODO: Add portfolio project images here using background images*/
 .surf-report {
   background-image: url(../images/surf.jpg);  
+  
 }
 
 .led-wall {
@@ -255,6 +257,7 @@ main {
 .run.buddy {
   background-image: url(../images/running.jpg);
 }
+ 
 
 /* media queries */
 
@@ -294,8 +297,10 @@ main {
 
 /* TODO: add media query for a max-width of 768px */
 
-#surf-report:first-child {
-  min-height: 400px;
-  flex-basis: 100%;
-  background-color: brown;
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
 }
