@@ -224,17 +224,8 @@ main {
   color: var(--secondary);
 }
 
-#section-about{
 
-}
 
-#section-work{
-
-}
-
-#section-contacts{
-  
-}
 /* portfolio project images */
 /* TODO: Add portfolio project images here using background images*/
 .surf-report {
@@ -254,7 +245,7 @@ main {
   background-image: url(../images/puzzle.jpg);
 }
 
-.run.buddy {
+.run-buddy {
   background-image: url(../images/running.jpg);
 }
  
@@ -303,4 +294,16 @@ main {
     justify-content: center;
     text-align: center;
   }
+
+  section.page-section#section-work div {
+  
+    background-color:;
+    flex-basis: 99%;
+  }
+
+  div.flex-item.surf-report {
+    max-height: 150px;
+    min-height: 150px;
+  }  
+  
 }
