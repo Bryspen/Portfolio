@@ -177,7 +177,7 @@ main {
 }
 
 /* feature first portfolio item */
-.flex-item:first-child {
+ .flex-item:first-child {
   min-height: 400px;
   flex:0 0 99%; 
 }
@@ -216,15 +216,12 @@ main {
   background-position: bottom;
   transition: all 0.25s ease-in;
   margin: 0 0.2rem 0.1rem;
-  display: inline-block;
 }
 
 .contact-address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
 }
-
-
 
 /* portfolio project images */
 /* TODO: Add portfolio project images here using background images*/
@@ -288,22 +285,64 @@ main {
 
 /* TODO: add media query for a max-width of 768px */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
   header {
     padding: 0 0 10px 0;
     justify-content: center;
     text-align: center;
   }
 
+  header ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+  
   section.page-section#section-work div {
   
-    background-color:;
+    
     flex-basis: 99%;
   }
 
-  div.flex-item.surf-report {
+  .page-section > h2 {
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 7vw;
+  }
+
+  .flex-item {
+    flex-basis: 100%;
+    border: 5px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--tertiary);
+    min-height: 150px;
+    max-height: 150px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .flex-item:first-child {
     max-height: 150px;
     min-height: 150px;
   }  
-  
+
+  .contact-address ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding:0%
+  }
+ .contact-address  a {
+    text-align: center;
+  }
 }
+
